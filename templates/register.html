@@ -1,0 +1,39 @@
+{% from "bootstrap5/form.html" import render_form %}
+{% include "header.html" %}
+
+<div class="container col-xxl-8 px-4 py-5">
+<!--   style="background-color: #F1F1F1;"-->
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img src="{{ url_for('static', filename='images/Eyes-bro_.png') }}" class="d-block mx-lg-auto img-fluid" alt="Eyes" width="700" height="500" loading="lazy">
+    </div>
+    <div class="col-lg-6">
+      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3" style="color: #002F6C !important;">Welcome to Lucky Logistics Inc!</h1>
+      <p class="lead" style="color: #6D6D6D;">
+        Join us today and enjoy a seamless shopping experience. Create an account to get started with personalized recommendations and secure transactions.
+      </p>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a href="#">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" style="background-color: #F77F00; border-color: #F77F00;">Get Started</button>
+        </a>
+        <a href="{{ url_for('about') }}">
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4" style="color: #6D6D6D; border-color: #6D6D6D;">Learn More</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main class="mb-4" style="background-color: #F1F1F1;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto p-4" style="background-color: #ffffff; border: 1px solid #6D6D6D; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+        <!--Rendering the registration form here-->
+        <h2 class="mb-4" style="color: #002F6C;">Register</h2>
+        {{render_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+      </div>
+    </div>
+  </div>
+</main>
+
+{% include "footer.html" %}

@@ -1,0 +1,67 @@
+{% include "header.html" %}
+
+<section class="py-5 text-center container" style="background-color: #F1F1F1;">
+  <div class="row py-lg-5">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <h1 class="fw-bold" style="color: #002F6C;">About Lucky Logistics Inc.</h1>
+      <p class="lead" style="color: #6D6D6D;">
+        At Lucky Logistics, we are dedicated to providing efficient, reliable, and innovative logistics solutions. Whether you're shipping locally or globally, our mission is to make logistics seamless and stress-free.
+      </p>
+      <p>
+        <a href="{{ url_for('get_all_products') }}" class="btn btn-primary my-2" style="background-color: #F77F00; border-color: #F77F00;">Explore Our Services</a>
+        <a href="{{ url_for('contact') }}" class="btn btn-secondary my-2">Contact Us</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Team or Achievements Section -->
+<div class="album py-5" style="background-color: #FFFFFF;">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="{{ url_for('static', filename='images/jason-goodman-Oalh2MojUuk-unsplash.jpg') }}" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Expert Team">
+          <div class="card-body">
+            <p class="card-text">
+              Meet our team of experienced logistics experts, dedicated to top-tier service and ensuring your shipments arrive on time.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="{{ url_for('homepage') }}" class="btn btn-sm btn-outline-secondary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="{{ url_for('static', filename='images/bernd-dittrich-vUVInpSk7Ts-unsplash.jpg') }}" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Ship container">
+          <div class="card-body">
+            <p class="card-text">
+              With our extensive network, we offer comprehensive shipping solutions to destinations around the globe.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="{{ url_for('about') }}" class="btn btn-sm btn-outline-secondary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="{{ url_for('static', filename='images/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg') }}" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Technology Driven">
+          <div class="card-body">
+            <p class="card-text">
+              We leverage cutting-edge technology to streamline your logistics experience and provide real-time tracking.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="{{ url_for('homepage') }}" class="btn btn-sm btn-outline-secondary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% include "footer.html" %}

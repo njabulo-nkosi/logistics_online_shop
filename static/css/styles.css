@@ -1,0 +1,14 @@
+.hero-section {
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+}
+
+#myCarousel {
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #F77F00 !important;
+    border-color: #F77F00 !important;
+
+}
+

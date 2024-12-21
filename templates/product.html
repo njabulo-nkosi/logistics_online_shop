@@ -1,0 +1,116 @@
+{% include "header.html" %}
+
+<!-- Carousel -->
+<div id="myCarousel" class="carousel slide mt-3 mb-6 pt-6" data-bs-ride="carousel" style="background-color: #f8f9fa; border: 1px solid #ddd; border-radius: 8px;">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{{ url_for('static', filename='images/markus-spiske-Qah759bAL3g-unsplash.jpg') }}" alt="Warehouse Operations" class="d-block w-100" style="height: 100vh; object-fit: cover;">
+            <div class="container">
+                <div class="carousel-caption text-start">
+                    <h1>Efficient Logistics Solutions</h1>
+                    <p class="opacity-75">Streamline your supply chain with our reliable and cost-effective logistics services.</p>
+                    <p><a class="btn btn-lg btn-primary" style="background-color: #F77F00; border-color: #F77F00" href="{{ url_for('register') }}">Sign Up Today</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{{ url_for('static', filename='images/lance-chang-h3pVxOIpnzk-unsplash.jpg') }}" alt="Global Freight Services" class="d-block w-100" style="height: 100vh; object-fit: cover;">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Global Freight Services</h1>
+                    <p>We ensure your goods are delivered on time, anywhere in the world.</p>
+                    <p><a class="btn btn-lg btn-primary" style="background-color: #F77F00; border-color: #F77F00" href="{{ url_for('about') }}">Learn More</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{{ url_for('static', filename='images/anirudh-KmQbT4FQvGQ-unsplash.jpg') }}" alt="Tailored Transport Services" class="d-block w-100" style="height: 100vh; object-fit: cover;">
+            <div class="container">
+                <div class="carousel-caption text-end">
+                    <h1>Tailored Transport Solutions</h1>
+                    <p>Customized services to meet your business needs.</p>
+                    <p><a class="btn btn-lg btn-primary" style="background-color: #F77F00; border-color: #F77F00" href="{{ url_for('get_all_products') }}">Our Services</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!-- Pricing Section -->
+<div class="container py-5">
+    <header>
+        <div class="text-center mb-4">
+            <h1 class="display-4 fw-bold" style="color: #002F6C;">Pricing Plans</h1>
+            <p class="text-muted">Choose the plan that suits your business needs.</p>
+        </div>
+    </header>
+    <main>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3 bg-light">
+                        <h4 class="my-0 fw-bold" style="color: #002F6C;">Starter</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/mo</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Basic shipping options</li>
+                            <li>Email support</li>
+                            <li>Online tracking</li>
+                        </ul>
+                        <a href="{{ url_for('product') }}" class="btn btn-lg btn-outline-primary" style="border-color: #F77F00; color: #F77F00;">Sign Up for Free</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3 bg-light">
+                        <h4 class="my-0 fw-bold" style="color: #002F6C;">Pro</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mo</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Priority shipping</li>
+                            <li>Dedicated account manager</li>
+                            <li>Real-time tracking</li>
+                        </ul>
+                        <a href="{{ url_for('checkout') }}" class="btn btn-lg btn-primary" style="background-color: #F77F00; border-color: #F77F00;">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm border-#F77F00" style="border-color: #F77F00;">
+                    <div class="card-header py-3" style="background-color: #F77F00; color: white;">
+                        <h4 class="my-0 fw-bold">Enterprise</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$99<small class="text-muted fw-light">/mo</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Custom logistics solutions</li>
+                            <li>24/7 support</li>
+                            <li>Unlimited tracking</li>
+                        </ul>
+                        <a href="{{ url_for('homepage') }}" class="btn btn-lg btn-light" style="background-color: #F77F00; color: white;">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+
+{% include "footer.html" %}
